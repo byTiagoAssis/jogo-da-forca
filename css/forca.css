@@ -1,7 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Roboto&family=Ubuntu:ital,wght@0,300;0,500;1,400&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+
+body {
+    width: 100vw;
+    height: 90vh;
+    margin-top: 10px;
+    background-color: goldenrod;    
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 #imagem {
@@ -9,4 +28,28 @@
     width: 234px;
     height: 272px;
     background-repeat: no-repeat;
+}
+
+#palavra-secreta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    margin-top: 30px;
+}
+
+.letras {
+    width: 16px;
+    text-align: center;
+    border-bottom: 2px solid #8b008b;
+    color: #ffffff;
+    padding: 2px;
+    margin-left: 2px;
+    margin-right: 2px;    
+}
+
+#teclado {
+    margin-top: 30px;
+    
 }
