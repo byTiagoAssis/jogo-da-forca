@@ -1,3 +1,4 @@
+let tentativas = 6;
 let listaDinamica = [];
 let palavraSecretaCategoria;
 let palavraSecretaSorteada;
@@ -54,5 +55,17 @@ function montarPalavraNaTela() {
         palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + listaDinamica[i] + "</div>";
     }
 }
+}
+
+function verificaletraEscolhida(letra) {
+    if (tentativas > 0) {
+        mudarStyleLetra("tecla-" + letra)
+    }
+    
+}
+
+function mudarStyleLetra(tecla) {
+    document.getElementById(tecla).style.background = "#C71585";
+    document.getElementById(tecla).style.color = "#ffffff"; 
 }
 
