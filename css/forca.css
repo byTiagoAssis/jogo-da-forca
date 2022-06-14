@@ -72,6 +72,10 @@ body {
     transform: scale(1.3);
 }
 
+.teclas button:disabled {
+    cursor: not-allowed;
+}
+
 #categoria {
     margin-top: 30px;
     color: #8b008b;
