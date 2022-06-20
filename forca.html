@@ -9,35 +9,35 @@
     <title>Jogo da Forca</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="modal" data-target="#exampleModalLong">Configurações</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contato</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Outros Jogos
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Jump Mario</a>
-                <a class="dropdown-item" href="#">Decoder</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+  <header class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-style">
+      <a class="navbar-brand" href="#">Tg Games</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active ">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-style" data-toggle="modal" data-target="#exampleModalLong">Configurações</a>
+          </li>            
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-style" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Outros Jogos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Jump Mario</a>
+              <a class="dropdown-item" target="_blank" href="https://bytiagoassis.github.io/decoder/decoder.html">Decoder</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header> 
+  
       <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -52,22 +52,19 @@
                 <form>
                     
                     <label for="palavra">Palavra:</label> <br>
-                    <input type="text" id="palavra" onkeyup="validaPalavra()">
+                    <input type="text" id="palavra" size="10" onkeyup="validaPalavra()">
                     <div id="txtPalavra"></div>
                     <br>
                     
                     <label for="categoria">Categoria:</label> <br>
-                    <input type="text" id="categoria" onkeyup="validaCategoria()">
-                    <div id="txtCategoria"></div>
-                    <br>
+                    <input type="text" id="categoria" size="10" onkeyup="validaCategoria()">
+                    <div id="txtCategoria"></div>               
                     
-                   
-                
                     </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onclick="enviar()">Save changes</button>
+              <button type="button" class="btn btn-primary" onclick="enviar()">Salvar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>              
             </div>
           </div>
         </div>

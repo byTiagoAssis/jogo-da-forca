@@ -27,6 +27,13 @@ body {
     cursor: pointer;
 }
 
+.nav-style {
+    border-radius: 10px;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
 #imagem {
     background-image: url(../img/forca.png);
     width: 234px;
