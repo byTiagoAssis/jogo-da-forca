@@ -29,7 +29,29 @@ const palavras = [
     },
 ]
 
-criarPalavraScreta()
+const teclado = document.querySelector('#teclado');
+teclado.classList.add('block');
+document.getElementById("desistir").disabled = true;
+
+function jogar(){
+       
+        teclado.classList.remove('block')    
+        criarPalavraScreta()
+        montarPalavraNaTela();
+        document.getElementById("jogar").disabled = true;
+        document.getElementById("desistir").disabled = false;
+   
+}
+
+function desistir() {
+    const palavraTela = document.getElementById("palavra-secreta");
+    
+    palavraTela.innerHTML = palavraSecretaSorteada; 
+    teclado.classList.add('block');
+    setTimeout(function(){location.reload()},10000)
+}
+
+
 function criarPalavraScreta() {
     const indexPalavra = parseInt(Math.random()* palavras.length)
     palavraSecretaSorteada = palavras[indexPalavra].nome;
@@ -38,7 +60,7 @@ function criarPalavraScreta() {
     console.log(palavraSecretaSorteada)
 }
 
-montarPalavraNaTela();
+
 function montarPalavraNaTela(){
     const categoria = document.getElementById("categoria");
     categoria.innerHTML = palavraSecretaCategoria;
@@ -146,4 +168,84 @@ function abreModal(titulo, mensagem) {
 let btnReiniciar = document.querySelector("#btnReiniciar");
 btnReiniciar.addEventListener("click", function(){
     location.reload();
+    document.getElementById("jogar").disabled = false;
 });
+
+
+
+
+
+
+
+let nome = window.document.getElementById ("palavra")
+
+let categoria = document.querySelector ('#categoria')
+let palavraOk = false
+let categoriaOk = false
+
+
+
+
+function validaPalavra() {
+    let txtPalavra = document.querySelector('#txtPalavra')
+
+    if (palavra.value.length < 3 || palavra.value.length > 8 ) {
+        txtPalavra.innerHTML = 'Palavra Inválida'
+        
+        txtPalavra.style.color = 'red'
+    } else {
+
+        txtPalavra.innerHTML = 'Palavra Válida'
+        txtPalavra.style.color = 'green' 
+         palavraOk = true
+    }
+
+}
+
+
+function validaCategoria() {
+    let txtCategoria = document.querySelector('#txtCategoria')
+
+    if (categoria.value.length < 3 || categoria.value.length > 8 ) {
+        txtCategoria.innerHTML = 'Categoria Inválida'
+        
+        txtCategoria.style.color = 'red';
+    } else {
+
+        txtCategoria.innerHTML = 'Categora Válida'
+        txtCategoria.style.color = 'green' 
+         categoriaOk = true
+    }
+
+}
+
+
+
+
+function enviar () {
+
+   
+    
+    if ( palavraOk == true && categoriaOk == true) {
+       
+        let palavra = this.lerDados();
+        palavras.push(palavra)
+        alert("Palavra criada com sucesso")
+        console.log(palavra)
+        console.log(palavras)
+
+    } else {
+        alert ("Preencha o formulário corretamente antes de enviar")
+    }
+        
+}
+
+ function lerDados() {
+    let palavra =  {}
+    palavra.nome = document.getElementById('palavra').value;
+    palavra.categoria = document.getElementById("categoria").value;
+
+    return palavra;
+}
+
+console.log(palavras)

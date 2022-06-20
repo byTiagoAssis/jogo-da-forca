@@ -23,6 +23,10 @@ body {
     flex-direction: column;
 }
 
+.nav-link {
+    cursor: pointer;
+}
+
 #imagem {
     background-image: url(../img/forca.png);
     width: 234px;
@@ -54,7 +58,12 @@ body {
     
 }
 
-.teclas button {
+.block:not(.atualizar)  {
+    pointer-events: none;    
+}
+
+
+.style-teclas {
     width: 24px;
     height: 24px;
     margin: 2px;
@@ -76,10 +85,16 @@ body {
     cursor: not-allowed;
 }
 
+
+
 #categoria {
     margin-top: 30px;
     color: #8b008b;
     font-size: 1.2em;
+}
+
+.jogar {
+    margin-top: 30px;
 }
 
 @media (min-width: 321px) {
